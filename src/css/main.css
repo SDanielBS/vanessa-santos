@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap');
+
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../images/bgInfo.webp);
+    background-color: #234071;
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center center;
+}
+
+li {
+    list-style: none;
+}
+
+.banner {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 100vh);
+}
+
+.boda {
+    grid-column: 1 / span 7;
+    height: 100vh;
+    background-image: url(../images/main.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 0px 6% 25px;
+}
+
+.info {
+    grid-column: 8 / span 5;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.iframe-container {
+    grid-column: 1 / span 12;
+    height: 400px;
+    background-color: green;
+}
+
+.map {
+    width: 100%;
+    height: 400px;
+    background: red;
+}
+
+.boda-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.boda-content .all-title > .title, .pre-title {
+    color: white;
+    text-align: center;
+    text-shadow: 0px 0px 5px #deddb9;
+    font-family: 'Sacramento', cursive;
+    font-size: 6rem;
+}
+
+.cinta > .title {
+    color: #c7c7c5;
+    z-index: 1;
+    text-shadow: 0px 0px 2px #cecece;
+    text-align: center;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 2rem;
+    transform: rotateZ(4deg);
+}
+
+.pre-title {
+    /* margin-top: 300px; */
+    line-height: 4rem;
+}
+
+.cinta {
+    background-image: url("../images/cinta2.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    margin-top: -25px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.cinta > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: invert(1);
+}
+
+.info-container {
+    display: flex;
+}
+.info-content {
+    padding: 50px 6%;
+}
+.divider {
+    background-color: white;
+    width: 2px;
+    display: inline-block;
+}
+
+.item-container {
+    margin-bottom: 2.5rem;
+}
+
+.item-container > h3 {
+    font-family: 'Sacramento', cursive;
+    font-size: 3.5rem;
+    color: #ebc52b;
+    line-height: 3rem;
+}
+
+.item-container > p {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: #ececec;
+    margin-bottom: .2rem;
+}
+
+.item-container span {
+    color: #dadada;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+.list-title {
+    font-size: 1.3rem;
+    margin-bottom: .3rem;
+}
+
+.iframe-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.info > .iframe-container {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .divider {
+        width: 0;
+        background: transparent;
+    }
+    .boda {
+        grid-column: 1 / span 12;
+    }
+    .info {
+        grid-column: 1 / span 12;
+        overflow: inherit;
+    }
+    .banner > .iframe-container{
+        display: none;
+    }
+    .info > .iframe-container {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .pre-title {
+        margin-top: 240px;
+        font-size: 3.8rem;
+    }
+    .boda-content .all-title > .title {
+        font-size: 4rem;
+    }
+    .cinta {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .pre-title {
+        margin-top: 150px;
+    }
+}
