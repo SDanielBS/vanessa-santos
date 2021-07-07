@@ -45,7 +45,7 @@ li {
     height: 400px;
 }
 
-.boda img {
+.boda > img {
     position: absolute;
     top: 0;
     left: 0;
@@ -74,11 +74,11 @@ li {
 }
 
 .cinta > .title {
-    color: #c7c7c5;
+    color: white;
     z-index: 1;
-    text-shadow: 0px 0px 2px #cecece;
+    text-shadow: 0px 0px 5px #deddb9;
     text-align: center;
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Sacramento', cursive;
     font-size: 2rem;
     transform: rotateZ(4deg);
 }
@@ -88,10 +88,6 @@ li {
 }
 
 .cinta {
-    background-image: url("../images/cinta2.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
     width: 300px;
     height: 300px;
     margin-top: -25px;
@@ -105,11 +101,8 @@ li {
 
 .cinta > img {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    filter: invert(1);
+    top: 20%;
 }
 
 .info-container {
@@ -201,6 +194,9 @@ li {
     }
     .boda-content .all-title > .title {
         font-size: 3.5rem;
+    }
+    .cinta > .title {
+        font-size: 1.5rem;
     }
     .cinta {
         width: 250px;
